@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.core import exceptions
 from django.utils import six
 

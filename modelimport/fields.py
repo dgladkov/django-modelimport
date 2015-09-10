@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import decimal
 from django.core import exceptions, validators
 from django.utils.encoding import smart_text
