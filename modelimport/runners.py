@@ -1,6 +1,5 @@
 import os
 from csv import excel
-from unicodecsv import DictReader
 from django.db import transaction
 from django.utils.translation import ugettext_lazy as _
 
@@ -98,6 +97,8 @@ class CsvRunner(BaseRunner):
         super(CsvRunner, self).__init__(*args, **kwargs)
 
     def read(self, filepath):
+        from unicodecsv import DictReader
+
         with open(filepath, 'r') as f:
             reader = DictReader(f, encoding=self.encoding, dialect=self.dialect)
             for row in reader:
